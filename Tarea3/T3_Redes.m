@@ -1,11 +1,12 @@
+close all;
 nEMIN=50;
-ventana=1;
+ventana=3;
 slot=5e-2;
 col=0;
 n=0;
 nta=0;
 ntb=0;
-p=.005;
+p=.005 ;
 tic
 while col <=nEMIN
     a=(rand(1,ventana/slot)<p);
@@ -22,3 +23,7 @@ while col <=nEMIN
     n=n+1; 
 end
 toc
+A=sprintf('La tasa de llegada de tramas de A a C es de : %0.3f',1-tErra);
+B=sprintf('La tasa de llegada de tramas de B a C es de : %0.3f',1-tErrb);
+A
+B
